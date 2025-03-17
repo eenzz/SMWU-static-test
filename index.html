@@ -1,129 +1,22 @@
-/* 전체 배경 */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* 연한 블루 계열 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column;
-}
-
-/* 컨테이너 */
-.container {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    width: 360px;
-    text-align: center;
-}
-
-/* 제목 */
-h1 {
-    color: #2e7d32;
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-/* 입력 필드 & 버튼 */
-.input-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-direction: column;
-}
-
-input {
-    padding: 10px;
-    border: 2px solid #81c784;
-    border-radius: 8px;
-    font-size: 14px;
-    width: calc(100% - 20px);
-}
-
-button {
-    background-color: #43a047;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-button:hover {
-    background-color: #388e3c;
-}
-
-/* 할 일 목록 스타일 */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.todo-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #e8f5e9;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.todo-item.completed span {
-    text-decoration: line-through;
-    color: #777;
-}
-
-/* 날짜 스타일 */
-.date-span {
-    font-size: 12px;
-    color: #555;
-    margin-left: 10px;
-}
-
-/* 삭제 버튼 */
-.delete-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #d32f2f;
-}
-.delete-btn:hover {
-    color: #b71c1c;
-}
-
-/* 달력 컨테이너 */
-.calendar-container {
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    width: 360px;
-    text-align: center;
-}
-
-#calendar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.calendar-date {
-    background-color: #c8e6c9;
-    padding: 8px;
-    border-radius: 8px;
-    min-width: 80px;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do 리스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📌 To-Do 리스트</h1>
+        <div class="input-container">
+            <input type="text" id="todo-input" placeholder="할 일을 입력하세요...">
+            <input type="date" id="todo-date">
+            <button id="add-btn">추가</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
